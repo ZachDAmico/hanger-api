@@ -1,0 +1,5 @@
+-- DROP TABLE hangerapi_cuisine;
+-- DROP TABLE hangerapi_pricerange;
+-- DROP TABLE hangerapi_review_restaurant;
+-- DROP TABLE hangerapi_review_user;
+-- DROP TABLE hangerapi_restaurant;

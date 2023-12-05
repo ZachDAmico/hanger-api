@@ -1,0 +1,222 @@
+[
+  {
+    "model": "hangerapi.review",
+    "pk": 1,
+    "fields": {
+      "user_id": 1,
+      "restaurant_id": 1,
+      "rating": 4,
+      "comment": "Delicious noodles!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 2,
+    "fields": {
+      "user_id": 2,
+      "restaurant_id": 1,
+      "rating": 5,
+      "comment": "Best noodles in town!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 3,
+    "fields": {
+      "user_id": 1,
+      "restaurant_id": 2,
+      "rating": 4,
+      "comment": "Amazing pasta!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 4,
+    "fields": {
+      "user_id": 2,
+      "restaurant_id": 2,
+      "rating": 5,
+      "comment": "Incredible pasta dishes!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 5,
+    "fields": {
+      "user_id": 1,
+      "restaurant_id": 3,
+      "rating": 4,
+      "comment": "Spicy bites are the best!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 6,
+    "fields": {
+      "user_id": 2,
+      "restaurant_id": 3,
+      "rating": 5,
+      "comment": "Delightful spicy dishes!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 7,
+    "fields": {
+      "user_id": 1,
+      "restaurant_id": 4,
+      "rating": 3,
+      "comment": "Tasty tacos!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 8,
+    "fields": {
+      "user_id": 2,
+      "restaurant_id": 4,
+      "rating": 4,
+      "comment": "Great variety of tacos!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 9,
+    "fields": {
+      "user_id": 1,
+      "restaurant_id": 5,
+      "rating": 4,
+      "comment": "Sushi here is fantastic!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 10,
+    "fields": {
+      "user_id": 2,
+      "restaurant_id": 5,
+      "rating": 5,
+      "comment": "Best sushi spot in town!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 11,
+    "fields": {
+      "user_id": 1,
+      "restaurant_id": 6,
+      "rating": 5,
+      "comment": "Juicy burgers, loved it!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 12,
+    "fields": {
+      "user_id": 2,
+      "restaurant_id": 6,
+      "rating": 4,
+      "comment": "Great burger options!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 13,
+    "fields": {
+      "user_id": 1,
+      "restaurant_id": 7,
+      "rating": 4,
+      "comment": "Noodles were delightful!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 14,
+    "fields": {
+      "user_id": 2,
+      "restaurant_id": 7,
+      "rating": 5,
+      "comment": "Excellent noodle dishes!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 15,
+    "fields": {
+      "user_id": 1,
+      "restaurant_id": 8,
+      "rating": 3,
+      "comment": "Good pizza, could be better.",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 16,
+    "fields": {
+      "user_id": 2,
+      "restaurant_id": 8,
+      "rating": 4,
+      "comment": "Nice ambiance, loved the pizza!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 17,
+    "fields": {
+      "user_id": 1,
+      "restaurant_id": 9,
+      "rating": 5,
+      "comment": "Awesome brisket, perfectly cooked!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 18,
+    "fields": {
+      "user_id": 2,
+      "restaurant_id": 9,
+      "rating": 4,
+      "comment": "Great pulled pork!",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 19,
+    "fields": {
+      "user_id": 1,
+      "restaurant_id": 10,
+      "rating": 3,
+      "comment": "Mules were unique but the owner is sketchy.",
+      "date": "2023-12-05"
+    }
+  },
+  {
+    "model": "hangerapi.review",
+    "pk": 20,
+    "fields": {
+      "user": 2,
+      "restaurant_id": 10,
+      "rating": 4,
+      "comment": "Interesting variety of mules, but Kevin never uses the telescope!",
+      "date": "2023-12-05"
+    }
+  }
+]
