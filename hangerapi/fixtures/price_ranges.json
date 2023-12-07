@@ -3,35 +3,35 @@
     "model": "hangerapi.pricerange",
     "pk": 1,
     "fields": {
-      "price_range": 1
+      "price_range": "$"
     }
   },
   {
     "model": "hangerapi.pricerange",
     "pk": 2,
     "fields": {
-      "price_range": 2
+      "price_range": "$$"
     }
   },
   {
     "model": "hangerapi.pricerange",
     "pk": 3,
     "fields": {
-      "price_range": 3
+      "price_range": "$$$"
     }
   },
   {
     "model": "hangerapi.pricerange",
     "pk": 4,
     "fields": {
-      "price_range": 4
+      "price_range": "$$$$"
     }
   },
   {
     "model": "hangerapi.pricerange",
     "pk": 5,
     "fields": {
-      "price_range": 5
+      "price_range": "$$$$$"
     }
   }
 ]

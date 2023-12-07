@@ -1,9 +1,14 @@
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-from hangerapi.views import UserViewSet
+from hangerapi.views import UserViewSet, CuisineView, PriceRangeView, RestaurantView, ReviewView
 
 router = DefaultRouter(trailing_slash=False)
+router.register(r'cuisines', CuisineView, 'cuisine')
+router.register(r'price_ranges', PriceRangeView, 'price_range' )
+router.register(r'restaurants', RestaurantView, 'restaurant' )
+router.register(r'reviews', ReviewView, 'review' )
+
 
 urlpatterns = [
     path('', include(router.urls)),
