@@ -12,3 +12,4 @@ class Restaurant(models.Model):
     # fk fields stay the same in reviews because it captures the individual reviews with fk relationships for "User" and "Restaurant"
     # user_reviews is needed as ManyToManyField to retrieve all reviews written by specific user for any restaurant and all reviews for specific restaurant
     users = models.ManyToManyField(User, through="Review", related_name="restaurant_reviews")
+    favorites = models.ManyToManyField(User, through="Favorite", related_name="favorite_restaurants")

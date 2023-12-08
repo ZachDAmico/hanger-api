@@ -5,13 +5,19 @@ from rest_framework import serializers
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
+from rest_framework.serializers import ModelSerializer
+from .restaurants import Restaurant
 
 
-
+class FavoriteRestaurantSerializer(ModelSerializer):
+    class Meta:
+        model = Restaurant
+        fields = ["name", "img_url"]
 class UserSerializer(serializers.ModelSerializer):
+    favorite_restaurants = FavoriteRestaurantSerializer(many=True)
     class Meta:
         model = User
-        fields = ('id', 'first_name', 'last_name', 'username', 'email', 'password')  # add other fields as needed
+        fields = ('id', 'first_name', 'last_name', 'username', 'email', 'password', "favorite_restaurants")  # add other fields as needed
         extra_kwargs = {'password': {'write_only': True}}
 
 class UserViewSet(viewsets.ViewSet):
@@ -65,3 +71,13 @@ class UserViewSet(viewsets.ViewSet):
             # Bad login details were provided. So we can't log the user in.
             data = { 'valid': False }
             return Response(data)
+        
+    def list(self, request):
+            """Handle GET requests for the list of users
+
+        Returns:
+            Response -- JSON serialized array of users
+        """
+            users = User.objects.all()
+            serializer = UserSerializer(users, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
