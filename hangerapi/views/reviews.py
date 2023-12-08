@@ -2,7 +2,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.serializers import ModelSerializer
 from rest_framework.response import Response
 from rest_framework import status
-from hangerapi.models import Review
+from hangerapi.models import Review, Restaurant
 from django.contrib.auth.models import User
 
 class UserReviewSerializer(ModelSerializer):
@@ -89,13 +89,36 @@ class ReviewView(ViewSet):
         Returns
             Response -- JSON serialized review instance
         """
-            serializer = ReviewSerializer(data=request.data)
-
-            if serializer.is_valid():
-             serializer.save()
-             return Response(serializer.data, status=status.HTTP_201_CREATED)
-            else:
-                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
             
-        
+            # ? this was original create method
+            # ? this made postman require dictionary for user key, but would not allow for username to be a name that already exists
 
+            # serializer = ReviewSerializer(data=request.data)
+
+            # if serializer.is_valid():
+            #  serializer.save()
+            #  return Response(serializer.data, status=status.HTTP_201_CREATED)
+            # else:
+            #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            
+            # ? so need to dynamically define the request body to expect what is needed - ie comment and rating
+
+            try:
+                user = request.user
+                rating = request.data.get("rating")
+                comment = request.data.get("comment")
+                restaurant_id = request.data.get("restaurant_id")
+                restaurant = Restaurant.objects.get(pk=restaurant_id)
+
+                review = Review.objects.create(
+                    user = user,
+                    rating = rating,
+                    comment = comment,
+                    restaurant = restaurant,
+                )
+
+                serializer = ReviewSerializer(review, context={"request": request})
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            
+            except Exception as ex:
+                return Response(ex, status=status.HTTP_400_BAD_REQUEST)
