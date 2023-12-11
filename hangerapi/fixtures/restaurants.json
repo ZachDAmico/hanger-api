@@ -1,0 +1,132 @@
+[
+  {
+    "model": "hangerapi.restaurant",
+    "pk": 1,
+    "fields": {
+      "name": "Sizzling Wok",
+      "location": "123 Main St",
+      "price_range": 2,
+      "rating": 4,
+      "hanger_level": 1,
+      "cuisine": 1,
+      "img_url": "https://example.com/sizzling-wok.jpg"
+    }
+  },
+  {
+    "model": "hangerapi.restaurant",
+    "pk": 2,
+    "fields": {
+      "name": "Pasta Palace",
+      "location": "456 Oak St",
+      "price_range": 3,
+      "rating": 5,
+      "hanger_level": 2,
+      "cuisine": 2,
+      "img_url": "https://example.com/pasta-palace.jpg"
+    }
+  },
+  {
+    "model": "hangerapi.restaurant",
+    "pk": 3,
+    "fields": {
+      "name": "Spicy Bites",
+      "location": "789 Elm St",
+      "price_range": 2,
+      "rating": 4,
+      "hanger_level": 3,
+      "cuisine": 3,
+      "img_url": "https://example.com/spicy-bites.jpg"
+    }
+  },
+  {
+    "model": "hangerapi.restaurant",
+    "pk": 4,
+    "fields": {
+      "name": "Taco Time",
+      "location": "234 Oak St",
+      "price_range": 1,
+      "rating": 3,
+      "hanger_level": 1,
+      "cuisine": 4,
+      "img_url": "https://example.com/taco-time.jpg"
+    }
+  },
+  {
+    "model": "hangerapi.restaurant",
+    "pk": 5,
+    "fields": {
+      "name": "Sushi Spot",
+      "location": "567 Pine St",
+      "price_range": 4,
+      "rating": 4,
+      "hanger_level": 2,
+      "cuisine": 5,
+      "img_url": "https://example.com/sushi-spot.jpg"
+    }
+  },
+  {
+    "model": "hangerapi.restaurant",
+    "pk": 6,
+    "fields": {
+      "name": "Burger Haven",
+      "location": "890 Maple St",
+      "price_range": 3,
+      "rating": 5,
+      "hanger_level": 3,
+      "cuisine": 7,
+      "img_url": "https://example.com/burger-haven.jpg"
+    }
+  },
+  {
+    "model": "hangerapi.restaurant",
+    "pk": 7,
+    "fields": {
+      "name": "Noodle Delight",
+      "location": "345 Pine St",
+      "price_range": 2,
+      "rating": 4,
+      "hanger_level": 1,
+      "cuisine": 3,
+      "img_url": "https://example.com/noodle-delight.jpg"
+    }
+  },
+  {
+    "model": "hangerapi.restaurant",
+    "pk": 8,
+    "fields": {
+      "name": "Pizza Paradise",
+      "location": "678 Elm St",
+      "price_range": 4,
+      "rating": 5,
+      "hanger_level": 2,
+      "cuisine": 2,
+      "img_url": "https://example.com/pizza-paradise.jpg"
+    }
+  },
+  {
+    "model": "hangerapi.restaurant",
+    "pk": 9,
+    "fields": {
+      "name": "BBQ Junction",
+      "location": "901 Oak St",
+      "price_range": 3,
+      "rating": 4,
+      "hanger_level": 3,
+      "cuisine": 6,
+      "img_url": "https://example.com/bbq-junction.jpg"
+    }
+  },
+  {
+    "model": "hangerapi.restaurant",
+    "pk": 10,
+    "fields": {
+      "name": "Kevin's House of Mules",
+      "location": "100 NSS Lane",
+      "price_range": 3,
+      "rating": 5,
+      "hanger_level": 5,
+      "cuisine": 8,
+      "img_url": "https://example.com/bbq-junction.jpg"
+    }
+  }
+]

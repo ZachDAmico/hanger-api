@@ -1,0 +1,58 @@
+[
+  {
+    "model": "hangerapi.cuisine",
+    "pk": 1,
+    "fields": {
+      "type": "Chinese"
+    }
+  },
+  {
+    "model": "hangerapi.cuisine",
+    "pk": 2,
+    "fields": {
+      "type": "Italian"
+    }
+  },
+  {
+    "model": "hangerapi.cuisine",
+    "pk": 3,
+    "fields": {
+      "type": "Thai"
+    }
+  },
+  {
+    "model": "hangerapi.cuisine",
+    "pk": 4,
+    "fields": {
+      "type": "Mexican"
+    }
+  },
+  {
+    "model": "hangerapi.cuisine",
+    "pk": 5,
+    "fields": {
+      "type": "Japanese"
+    }
+  },
+  {
+    "model": "hangerapi.cuisine",
+    "pk": 6,
+    "fields": {
+      "type": "BBQ"
+    }
+  },
+  {
+    "model": "hangerapi.cuisine",
+    "pk": 7,
+    "fields": {
+      "type": "Burgers"
+    }
+  },
+  {
+    "model": "hangerapi.cuisine",
+    "pk": 8,
+    "fields": {
+      "type": "Strictly Tots and Mules"
+    }
+  }
+]
