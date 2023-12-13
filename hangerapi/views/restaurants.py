@@ -18,7 +18,7 @@ class RestaurantSerializer(serializers.ModelSerializer):
         model = Restaurant
         # can be reviews because of related name from review model
         # removed rating from fields here because it's in review
-        fields = ["name", "location", "price_range", "hanger_level", "cuisine", "img_url", "reviews" ]
+        fields = ["id", "name", "location", "price_range", "hanger_level", "cuisine", "img_url", "reviews" ]
 
 class RestaurantView(ViewSet):
 
