@@ -43,7 +43,7 @@ class UserViewSet(viewsets.ViewSet):
                   
 
     @action(detail=False, methods=['post'], url_path='login')
-    def login_user(self, request):
+    def user_login(self, request):
         '''Handles the authentication of a user
 
         Method arguments:
