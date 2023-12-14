@@ -3,38 +3,39 @@ from rest_framework.serializers import ModelSerializer
 from rest_framework.response import Response
 from rest_framework import status, serializers
 from hangerapi.models import Favorite, Restaurant
-
-
+from django.shortcuts import get_object_or_404
+class FavoriteRestaurantSerializer(ModelSerializer):
+    class Meta:
+        model = Restaurant
+        fields = ["name", "img_url"]
 class FavoriteSerializer(ModelSerializer):
+    restaurant = FavoriteRestaurantSerializer(many=False)
     class Meta:
         model = Favorite
         fields = ["user", "restaurant"]
-
-# class FavoriteRestaurantSerializer(ModelSerializer):
-#     class Meta:
-#         model = Restaurant
-#         fields = ["name", "img_url"]
-
-
 class FavoriteView(ViewSet):
-
     def create(self, request):
-        """Handle POST operations for favorite
-
-        Returns
-            Response -- JSON serialized review instance
-        """
-        serializer = FavoriteSerializer(data=request.data)
-
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
+        # Get user from the request (assuming token authentication)
+        user = request.user
+        # Get restaurant ID from the request
+        restaurant_id = request.data.get('restaurant')
+        # Retrieve the Restaurant instance using the provided primary key
+        restaurant_instance = get_object_or_404(Restaurant, pk=restaurant_id)
+        # Create Favorite instance associated with the user and the retrieved Restaurant instance
+        create = Favorite.objects.create(
+            user=user,
+            restaurant=restaurant_instance
+        )
+        # Serialize and return the response
+        serializer = FavoriteSerializer(create, context={'request': request})
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    def list(self, request):
+        # Change variable name to 'favorites'
+        favorites = Favorite.objects.filter(user=request.user)
+        serializer = FavoriteSerializer(favorites, many=True)
+        return Response(serializer.data)
     def destroy(self, request, pk=None):
         """Handle DELETE requests for a single favorite
-
         Returns:
             Response -- empty response body
         """
@@ -46,3 +47,4 @@ class FavoriteView(ViewSet):
             return Response({"message": "This is not your favorite."}, status=status.HTTP_403_FORBIDDEN)
         except Favorite.DoesNotExist as ex:
                 return Response({"message": ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+
