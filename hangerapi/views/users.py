@@ -15,6 +15,7 @@ class FavoriteRestaurantSerializer(ModelSerializer):
         fields = ["name", "img_url"]
 class UserSerializer(serializers.ModelSerializer):
     favorite_restaurants = FavoriteRestaurantSerializer(many=True)
+   
     class Meta:
         model = User
         fields = ('id', 'first_name', 'last_name', 'username', 'email', 'password', "favorite_restaurants")  # add other fields as needed
@@ -81,3 +82,16 @@ class UserViewSet(viewsets.ViewSet):
             users = User.objects.all()
             serializer = UserSerializer(users, many=True)
             return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    def retrieve(self, request, pk=None):
+            """Handle GET requests for a single user
+        
+        Returns:
+            Response -- JSON serialized user object
+            """
+            try:
+                review = User.objects.get(pk=pk)
+                serializer = UserSerializer(review, context={"request": request})
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            except User.DoesNotExist as ex:
+                return Response({"message": ex.args[0]}, status=status.HTTP_404_NOT_FOUND)

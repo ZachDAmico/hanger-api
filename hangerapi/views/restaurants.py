@@ -40,6 +40,7 @@ class RestaurantView(ViewSet):
             """
             try:
                 restaurant = Restaurant.objects.get(pk=pk)
+                reviews = restaurant.reviews.all().order_by('-date')
                 serializer = RestaurantSerializer(restaurant, context={"request": request})
                 return Response(serializer.data, status=status.HTTP_200_OK)
             except Restaurant.DoesNotExist as ex:
