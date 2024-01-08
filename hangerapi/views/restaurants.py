@@ -20,6 +20,7 @@ class RestaurantSerializer(serializers.ModelSerializer):
         # removed rating from fields here because it's in review
         fields = ["id", "name", "location", "price_range", "hanger_level", "cuisine", "img_url", "reviews" ]
 
+# ? REMINDER - functions inside Python classes are methods, ViewSets are Django related
 class RestaurantView(ViewSet):
 
         def list(self, request):

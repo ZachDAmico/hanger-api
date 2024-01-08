@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status, serializers
 from hangerapi.models import PriceRange
 
+# price_range break point most likely triggered first because Django looks for nest data first and the landing page makes GET request for all restaurants. price_range is first piece of nested data in that request
 class PriceRangeSerializer(serializers.ModelSerializer):
     class Meta:
         model = PriceRange
