@@ -4,10 +4,14 @@ from rest_framework.response import Response
 from rest_framework import status, serializers
 from hangerapi.models import Favorite, Restaurant
 from django.shortcuts import get_object_or_404
+
+# FavoriteRestaurantSerializer created because some restaurant fields are needed when favorite instance is serialized. then stored in FavoriteSerializer as variable called restaurant because that is the name of the field in the favorite model
 class FavoriteRestaurantSerializer(ModelSerializer):
     class Meta:
         model = Restaurant
         fields = ["name", "img_url"]
+
+# FavoriteSerializer is directly associated with the Favorite model. It tells the frontend which fields from the Favorite model are accessible. In this case, it's the user and restaurant
 class FavoriteSerializer(ModelSerializer):
     restaurant = FavoriteRestaurantSerializer(many=False)
     class Meta:

@@ -9,7 +9,7 @@
       "rating": 4,
       "hanger_level": 1,
       "cuisine": 1,
-      "img_url": "https://example.com/sizzling-wok.jpg"
+      "img_url": "https://i.imgur.com/VXxLMnm.png"
     }
   },
   {
@@ -22,7 +22,7 @@
       "rating": 5,
       "hanger_level": 2,
       "cuisine": 2,
-      "img_url": "https://example.com/pasta-palace.jpg"
+      "img_url": "https://i.imgur.com/MXFohtz.png"
     }
   },
   {
@@ -35,7 +35,7 @@
       "rating": 4,
       "hanger_level": 3,
       "cuisine": 3,
-      "img_url": "https://example.com/spicy-bites.jpg"
+      "img_url": "https://i.imgur.com/UjNcx2Z.png"
     }
   },
   {
@@ -48,7 +48,7 @@
       "rating": 3,
       "hanger_level": 1,
       "cuisine": 4,
-      "img_url": "https://example.com/taco-time.jpg"
+      "img_url": "https://i.imgur.com/IYtWzNI.png"
     }
   },
   {
@@ -61,7 +61,7 @@
       "rating": 4,
       "hanger_level": 2,
       "cuisine": 5,
-      "img_url": "https://example.com/sushi-spot.jpg"
+      "img_url": "https://i.imgur.com/qk8zwSX.png"
     }
   },
   {
@@ -74,7 +74,7 @@
       "rating": 5,
       "hanger_level": 3,
       "cuisine": 7,
-      "img_url": "https://example.com/burger-haven.jpg"
+      "img_url": "https://i.imgur.com/Q4U4M6Z.png"
     }
   },
   {
@@ -87,7 +87,7 @@
       "rating": 4,
       "hanger_level": 1,
       "cuisine": 3,
-      "img_url": "https://example.com/noodle-delight.jpg"
+      "img_url": "https://i.imgur.com/NggAYUJ.png"
     }
   },
   {
@@ -100,7 +100,7 @@
       "rating": 5,
       "hanger_level": 2,
       "cuisine": 2,
-      "img_url": "https://example.com/pizza-paradise.jpg"
+      "img_url": "https://i.imgur.com/VLuLcKa.png"
     }
   },
   {
@@ -113,7 +113,7 @@
       "rating": 4,
       "hanger_level": 3,
       "cuisine": 6,
-      "img_url": "https://example.com/bbq-junction.jpg"
+      "img_url": "https://i.imgur.com/ujw9ybg.png"
     }
   },
   {
@@ -126,7 +126,7 @@
       "rating": 5,
       "hanger_level": 5,
       "cuisine": 8,
-      "img_url": "https://example.com/bbq-junction.jpg"
+      "img_url": "https://i.imgur.com/2EhYeeO.png"
     }
   }
 ]
