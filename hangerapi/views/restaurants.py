@@ -29,6 +29,10 @@ class RestaurantView(ViewSet):
         Returns:
             Response -- JSON serialized array of restaurants
         """
+            # Restaurant,objects.all() makes query that retrieves all instances of the Restaurant model from the database - then stored in restaurants variable
+            # restaurants variable then used as parameter for proper serializer(RestaurantSerializer) many=True argument lets serializer know there will be multiple instances
+            # result of serialized data stored in serializer variable to be used in Response so proper JSON format can be sent to front end and displayed
+            # with response status to indicate success
             restaurants = Restaurant.objects.all()
             serializer = RestaurantSerializer(restaurants, many=True)
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -39,6 +43,16 @@ class RestaurantView(ViewSet):
         Returns:
             Response -- JSON serialized restaurant object
             """
+
+            # A GET request is made to retrieve a single Restaurant instance based on the provided primary key (pk)
+            # if Restaurant instance matching pk found, it's serialized
+            # if no matching pk found, Restaurant.DoesNotExist exception caught and error message shown in response
+            # context parameter used to pass additional information to a serializer that it might need to correctly serialize or deserialize data
+            # The context is a dictionary that can be passed to a serializer upon its instantiation.
+            # It's typically used to provide data that is not part of the model instance being serialized but is still necessary for the serialization process
+            # In retrieve method, passing context={"request": request} to the RestaurantSerializer
+            # This means inside RestaurantSerializer, you can access the request object using self.context['request']
+            # This access to the request object can be used to tailor the serialized data according to the current user (the user who sent the request) -ie what is rendered can be altered to fit current user or user status
             try:
                 restaurant = Restaurant.objects.get(pk=pk)
                 reviews = restaurant.reviews.all().order_by('-date')
